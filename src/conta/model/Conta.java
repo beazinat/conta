@@ -1,100 +1,100 @@
 package conta.model;
 
 public class Conta {
-  
-  private int numero;
-	private int agencia;
-	private int tipo;
-	private String titular;
-	private float saldo;
 
-	public Conta(int numero, int agencia, int tipo, String titular, float saldo) {
-		this.numero = numero;
-		this.agencia = agencia;
-		this.tipo = tipo;
-		this.titular = titular;
-		this.saldo = saldo;
+public Conta(int number, int agency, int type, String holder, float balance) {
+	this.number = number;
+	this.agency = agency;
+	this.type = type;
+	this.holder = holder;
+	this.balance = balance;
+}
+
+private int number;
+	private int agency;
+	private int type;
+	private String holder;
+	private float balance;
+
+
+	public int getNumber() {
+		return number;
 	}
 
-	public int getNumero() {
-		return numero;
+	public void setNumber(int number) {
+		this.number = number;
 	}
 
-	public void setNumero(int numero) {
-		this.numero = numero;
+	public int getAgency() {
+		return agency;
 	}
 
-	public int getAgencia() {
-		return agencia;
+	public void setAgency(int agency) {
+		this.agency = agency;
 	}
 
-	public void setAgencia(int agencia) {
-		this.agencia = agencia;
+	public int getType() {
+		return type;
 	}
 
-	public int getTipo() {
-		return tipo;
+	public void setType(int type) {
+		this.type = type;
 	}
 
-	public void setTipo(int tipo) {
-		this.tipo = tipo;
+	public String getHolder() {
+		return holder;
 	}
 
-	public String getTitular() {
-		return titular;
+	public void setHolder(String holder) {
+		this.holder = holder;
 	}
 
-	public void setTitular(String titular) {
-		this.titular = titular;
+	public float getBalance() {
+		return balance;
 	}
 
-	public float getSaldo() {
-		return saldo;
+	public void setBalance(float balance) {
+		this.balance = balance;
 	}
 
-	public void setSaldo(float saldo) {
-		this.saldo = saldo;
-	}
-
-	public boolean sacar(float valor) { 
+	public boolean withdraw(float value) { 
 		
-		if(this.getSaldo() < valor) {
-			System.out.println("\n Saldo Insuficiente!");
+		if(this.getBalance() < value) {
+			System.out.println("\nSaldo Insuficiente!");
 			return false;
 		}
 			
-		this.setSaldo(this.getSaldo() - valor);
+		this.setBalance(this.getBalance() - value);
 		return true;
 	}
 
-	public void depositar(float valor) {
+	public void deposit(float value) {
 
-		this.setSaldo(this.getSaldo() + valor);
+		this.setBalance(this.getBalance() + value);
 
 	}
 	
-	public void visualizar() {
+	public void visualize() {
 
-		String tipo = "";
+		String type = "";
 		
-		switch(this.tipo) {
+		switch(this.type) {
 		case 1:
-			tipo = "Conta Corrente";
+			type = "Conta Corrente";
 		break;
 		case 2:
-			tipo = "Conta Poupança";
+			type = "Conta Poupança";
 		break;
 		}
 		
 		System.out.println("\n\n***********************************************************");
 		System.out.println("Dados da Conta:");
 		System.out.println("***********************************************************");
-		System.out.println("Numero da Conta: " + this.numero);
-		System.out.println("Agência: " + this.agencia);
-		System.out.println("Tipo da Conta: " + tipo);
-		System.out.println("Titular: " + this.titular);
-		System.out.println("Saldo: " + this.saldo);
+		System.out.println("Numero da Conta: " + this.number);
+		System.out.println("Agência: " + this.agency);
+		System.out.println("Tipo da Conta: " + type);
+		System.out.println("Titular: " + this.holder);
+		System.out.println("Saldo: " + this.balance);
 
 	}
-  
 }
