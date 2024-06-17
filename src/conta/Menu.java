@@ -71,7 +71,7 @@ public class Menu {
 					do {
 						System.out.println("Digite o Tipo da Conta (1-CC ou 2-CP): ");
 						type = sc.nextInt();
-					} while(type < 1 && type > 2);
+					} while(type < 1 || type > 2);
 					
 					System.out.println("Digite o Saldo da Conta (R$): ");
 					balance = sc.nextFloat();
