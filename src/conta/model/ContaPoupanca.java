@@ -2,26 +2,26 @@ package conta.model;
 
 public class ContaPoupanca extends Conta{
 	
-	private int birthday;
+	private int birthDate;
 	
-	public ContaPoupanca(int number, int agency, int type, String holder, float balance, int birthday) {
+	public ContaPoupanca(int number, int agency, int type, String holder, float balance, int birthDate) {
 		super(number, agency, type, holder, balance);
-		this.birthday = birthday;
+		this.birthDate = birthDate;
 		
 	}
 	
-	public int getBirthday() {
-		return birthday;
+	public int getBirthdate() {
+		return birthDate;
 	}
 	
-	public void setBirthday(int birthday) {
-		this.birthday = birthday;
+	public void setBirthday(int birthDate) {
+		this.birthDate = birthDate;
 
 	}
 	
 	@Override
 		public void visualize() {
 			super.visualize();
-			System.out.println("Aniversário da conta: " + this.birthday);
+			System.out.println("Aniversário da conta: " + this.birthDate);
 	}
 }
