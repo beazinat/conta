@@ -1,6 +1,6 @@
 package conta.model;
 
-public class Conta {
+public abstract class Conta {
 
 public Conta(int number, int agency, int type, String holder, float balance) {
 	this.number = number;
